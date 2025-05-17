@@ -1,4 +1,4 @@
-name: Print commit Message
+name: New push
 
 on:
     push:
@@ -12,7 +12,7 @@ jobs:
         steps:
             - name: Checkout code
             - uses: actions/checkout@v4
-            
+
               run: 
                 echo "commit message"
                 git log -1 --pretty=%B
