@@ -1,0 +1,32 @@
+name: Print commit Message
+
+on:
+    push:
+        branches:
+            - 'main'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+            - uses: actions/checkout@v4
+            - name: Build projecct
+              run: echo "building the project"
+    test:           
+        runs-on: ubuntu-latest
+        need: build
+        steps:
+            - name: Checkout code
+            - uses: actions/checkout@v4
+            - name: test projecct
+              run: echo "running the test...."
+    deploy:
+        runs-on: ubuntu-latest
+        need: build
+        steps:
+            - name: Checkout code
+            - uses: actions/checkout@v4
+            - name: Deploy projecct
+              run: echo "Deploying the project...."
+            
