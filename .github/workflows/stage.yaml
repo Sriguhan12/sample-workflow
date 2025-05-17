@@ -1,4 +1,4 @@
-name: Print commit Message
+name: Pipeline with stages 
 
 on:
     push:
