@@ -23,7 +23,7 @@ jobs:
               run: echo "running the test...."
     deploy:
         runs-on: ubuntu-latest
-        needs: build
+        needs: test
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
