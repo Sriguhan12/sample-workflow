@@ -15,7 +15,7 @@ jobs:
               run: echo "building the project"
     test:           
         runs-on: ubuntu-latest
-        need: build
+        needs: build
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
@@ -23,7 +23,7 @@ jobs:
               run: echo "running the test...."
     deploy:
         runs-on: ubuntu-latest
-        need: build
+        needs: build
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
